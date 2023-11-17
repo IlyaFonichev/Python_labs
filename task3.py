@@ -4,13 +4,13 @@ from collections import Counter
 
 def count_letters(text):
     counter = Counter(text.lower())
-    return dict([i for i in counter.items() if i[0].isalpha()])
+    return dict([index for index in counter.items() if index[0].isalpha()])
 
 
 # TODO Напишите функцию calculate_frequency
 def calculate_frequency(dicts):
     letters = sum(dicts.values())
-    return dict([(i, j / letters) for i, j in dicts.items()])
+    return dict([(index, symbol / letters) for index, symbol in dicts.items()])
 
 
 main_str = """
